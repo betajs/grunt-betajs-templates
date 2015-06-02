@@ -1,0 +1,46 @@
+{
+  "name": "grunt-betajs-templates",
+  "description": "Build BetaJS templates.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/betajs/grunt-betajs-templates",
+  "author": {
+    "name": "Oliver Friedmann",
+    "email": "info@betajs.com"
+  },
+  "contributors": [
+    "Oliver Friedmann",
+    "Victor Lingenthal",
+    "Matt McNaughton"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/betajs/grunt-betajs-templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/betajs/grunt-betajs-templates/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/betajs/grunt-betajs-templates/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}

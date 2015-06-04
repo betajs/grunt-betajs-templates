@@ -35,6 +35,9 @@ module.exports = function(grunt) {
             'test/fixtures/*.html'
           ]
         }
+      },
+      options: {
+        namespace: 'App.Templates'
       }
     },
 

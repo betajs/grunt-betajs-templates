@@ -38,6 +38,29 @@ grunt.initConfig({
 });
 ```
 
+#### Options
+The namespace of the `betajs_templates` can be specified using
+`options.namespace`.
+
+```js
+grunt.initConfig({
+  betajs_templates: {
+    options: {
+      namespace: "App.Templates"
+    },
+    dist: {
+      files: {
+        "dest/betajs-templates.js": [
+          "src/my_first_template.html",
+          "src/my_second_template.html",
+          "src/my_last_templates.html"
+        ]
+      }
+    },
+  },
+});
+```
+
 ## Contributors
 
 - Oliver Friedmann

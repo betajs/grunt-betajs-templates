@@ -48,7 +48,13 @@ module.exports = function(grunt) {
       }
     };
 
-    var namespace = this.options({namespace: "BetaJS.Templates.Cached"}).namespace;
+    // Return with error if no namespace is specified.
+    if (!this.options().namespace) {
+      grunt.fail.warn("Please specify options.namespace for this task.");
+      return ""; // Even if force is used, the execution will stop here.
+    }
+
+    var namespace = this.options().namespace;
 
     var scriptRegex = /<script\s+type\s*=\s*["']text\/template["']\s+id\s*=\s*["']([^"']*)["']\s*>([\w\W]*?)<\/script>/ig;
 

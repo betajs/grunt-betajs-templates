@@ -80,17 +80,17 @@ module.exports = function(grunt) {
         source = source.replace(new RegExp("[\n\t\r]", "g"), " ");
         var result = "";
         source.replace(scriptRegex, function (match, id, content) {
-          result += namespace + "['" + id + "'] = '" + Helper.jsEscape(content) + "';\n";
+          result += namespace + "." + id + " = '" + Helper.jsEscape(content) + "';\n";
         });
         if (!result) {
-        	var id = filepath;
-        	var idx = id.lastIndexOf("/");
-        	if (idx >= 0)
-        		id = id.substring(idx + 1);
-        	idx = id.indexOf(".");
-        	if (idx >= 0)
-        		id = id.substring(0, idx);
-        	result += namespace + "['" + id + "'] = '" + Helper.jsEscape(source) + "';\n"; 
+          var id = filepath;
+          var idx = id.lastIndexOf("/");
+          if (idx >= 0)
+            id = id.substring(idx + 1);
+          idx = id.indexOf(".");
+          if (idx >= 0)
+            id = id.substring(0, idx);
+          result += namespace + "." + id + " = '" + Helper.jsEscape(source) + "';\n";
         }
 
         // return processed template

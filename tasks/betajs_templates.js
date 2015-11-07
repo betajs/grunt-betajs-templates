@@ -58,13 +58,24 @@ module.exports = function(grunt) {
 
     var scriptRegex = /<script\s+type\s*=\s*["']text\/template["']\s+id\s*=\s*["']([^"']*)["']\s*>([\w\W]*?)<\/script>/ig;
 
+    var buildString = function (namespace, id, content) {
+    	var wellNamed = /^[$A-Z_][0-9A-Z_$]*$/i;
+    	return namespace + (wellNamed.test(id) ? ("." + id) : ('["' + id + '"]')) + " = '" + Helper.jsEscape(content) + "';\n";
+    };
+    
     // For every file group
     this.files.forEach(function(fileObj) {
       // get a list of all of the files in the file group
       var files = grunt.file.expand({nonull: true}, fileObj.src);
 
       // create header for concattenated templates file
-      var src = namespace + " = " + namespace + " || {};\n";
+      var bases = namespace.split(".");
+      var currentNS = bases[0];
+      var src = currentNS + " = " + currentNS + " || {};\n";
+      for (var i = 1; i < bases.length; ++i) {
+    	  currentNS += "." + bases[i];
+    	  src += currentNS + " = " + currentNS + " || {};\n";
+      }
 
       // src is the concatenation of all processed templates within file group
       src += files.map(function(filepath) {
@@ -80,17 +91,19 @@ module.exports = function(grunt) {
         source = source.replace(new RegExp("[\n\t\r]", "g"), " ");
         var result = "";
         source.replace(scriptRegex, function (match, id, content) {
-          result += namespace + "." + id + " = '" + Helper.jsEscape(content) + "';\n";
+          result += buildString(namespace, id, content);
         });
         if (!result) {
           var id = filepath;
           var idx = id.lastIndexOf("/");
-          if (idx >= 0)
-            id = id.substring(idx + 1);
+          if (idx >= 0) {
+              id = id.substring(idx + 1);
+          }
           idx = id.indexOf(".");
-          if (idx >= 0)
-            id = id.substring(0, idx);
-          result += namespace + "." + id + " = '" + Helper.jsEscape(source) + "';\n";
+          if (idx >= 0) {
+              id = id.substring(0, idx);
+          }
+          result += buildString(namespace, id, source);
         }
 
         // return processed template

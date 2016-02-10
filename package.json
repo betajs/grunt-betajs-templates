@@ -1,10 +1,10 @@
 {
   "name": "grunt-betajs-templates",
   "description": "Build BetaJS templates.",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "homepage": "https://github.com/betajs/grunt-betajs-templates",
   "author": {
-    "name": "Oliver Friedmann",
+    "name": "BetaJS",
     "email": "info@betajs.com"
   },
   "contributors": [
@@ -19,10 +19,11 @@
   "bugs": {
     "url": "https://github.com/betajs/grunt-betajs-templates/issues"
   },
+  "license": "Apache 2.0",
   "licenses": [
     {
-      "type": "MIT",
-      "url": "https://github.com/betajs/grunt-betajs-templates/blob/master/LICENSE-MIT"
+      "type": "Apache 2.0",
+      "url": "https://github.com/betajs/grunt-betajs-templates/blob/master/LICENSE"
     }
   ],
   "engines": {

@@ -1,7 +1,3 @@
-/* jshint camelcase: false */
-
-'use strict';
-
 var grunt = require('grunt');
 
 exports.betajs_templates = {
@@ -10,7 +6,7 @@ exports.betajs_templates = {
   },
 
   // Test a default configuration.
-  default: function(test) {
+  "default": function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/expected.js');

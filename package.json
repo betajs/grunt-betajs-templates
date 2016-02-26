@@ -1,48 +1,66 @@
 {
-  "name": "grunt-betajs-templates",
-  "description": "Build BetaJS templates.",
-  "version": "0.1.8",
-  "homepage": "https://github.com/betajs/grunt-betajs-templates",
-  "author": {
-    "name": "BetaJS",
-    "email": "info@betajs.com"
-  },
-  "contributors": [
-    "Oliver Friedmann",
-    "Victor Lingenthal",
-    "Matt McNaughton"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/betajs/grunt-betajs-templates.git"
-  },
-  "bugs": {
-    "url": "https://github.com/betajs/grunt-betajs-templates/issues"
-  },
-  "license": "Apache 2.0",
-  "licenses": [
-    {
-      "type": "Apache 2.0",
-      "url": "https://github.com/betajs/grunt-betajs-templates/blob/master/LICENSE"
+    "homepage": "https://github.com/betajs/grunt-betajs-templates",
+    "license": "Apache-2.0",
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "https://github.com/betajs/grunt-betajs-templates/blob/master/LICENSE"
+        }
+    ],
+    "author": {
+        "name": "BetaJS",
+        "email": "info@betajs.com"
+    },
+    "bugs": {
+        "url": "https://github.com/betajs/grunt-betajs-templates/issues"
+    },
+    "name": "grunt-betajs-templates",
+    "description": "Build BetaJS templates.",
+    "version": "0.1.9",
+    "contributors": [
+        "Oliver Friedmann",
+        "Victor Lingenthal",
+        "Matt McNaughton"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/betajs/grunt-betajs-templates.git"
+    },
+    "engines": {
+        "node": ""
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "devDependencies": {
+        "grunt": "",
+        "grunt-continue": "",
+        "grunt-contrib-clean": "",
+        "grunt-contrib-jshint": "",
+        "grunt-template": "",
+        "grunt-jsdoc": "",
+        "betajs-compile": "betajs/betajs-compile",
+        "grunt-betajs-docs-compile": "",
+        "grunt-contrib-nodeunit": ""
+    },
+    "keywords": [
+        "gruntplugin"
+    ],
+    "meta": {
+        "blog": "http://blog.betajs.com",
+        "twitter": "http://twitter.com/thebetajs",
+        "badges": {
+            "codeclimate": true,
+            "travis": false,
+            "npm": true
+        },
+        "credits": [
+            "Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud"
+        ],
+        "compatability": {
+            "NodeJS": "0.10 - Latest"
+        },
+        "installdoc": "docsrc/common/install.md",
+        "summarydoc": "docsrc/common/summary.md"
     }
-  ],
-  "engines": {
-    "node": ">= 0.8.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-continue": "^0.1.0",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-nodeunit": "^0.3.3"
-  },
-  "peerDependencies": {
-    "grunt": "~0.4.5"
-  },
-  "keywords": [
-    "gruntplugin"
-  ]
 }

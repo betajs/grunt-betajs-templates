@@ -1,9 +1,15 @@
-# grunt-betajs-templates
+# grunt-betajs-templates 0.1.9
+[![Code Climate](https://codeclimate.com/github/betajs/grunt-betajs-templates/badges/gpa.svg)](https://codeclimate.com/github/betajs/grunt-betajs-templates)
+[![npm version](https://img.shields.io/npm/v/grunt-betajs-templates.svg?style=flat)](https://www.npmjs.com/package/grunt-betajs-templates)
 
-> Build [BetaJS](http://betajs.com/jsdoc/index.html) templates.
+Build BetaJS templates.
+
+
 
 ## Getting Started
-This plugin requires Grunt `~0.4.5`
+
+
+This plugin requires Grunt.
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -17,9 +23,13 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-betajs-templates');
 ```
 
-## The "betajs_templates" task
 
-### Overview
+
+
+## Basic Usage
+
+
+#### Overview
 In your project's Gruntfile, add a section named `betajs_templates` to the data object passed into `grunt.initConfig()`.
 
 #### Options
@@ -75,18 +85,41 @@ grunt.initConfig({
 });
 ```
 
+
+## Links
+| Resource   | URL |
+| :--------- | --: |
+| Homepage   | [https://github.com/betajs/grunt-betajs-templates](https://github.com/betajs/grunt-betajs-templates) |
+| Git        | [git://github.com/betajs/grunt-betajs-templates.git](git://github.com/betajs/grunt-betajs-templates.git) |
+| Repository | [http://github.com/betajs/grunt-betajs-templates](http://github.com/betajs/grunt-betajs-templates) |
+| Blog       | [http://blog.betajs.com](http://blog.betajs.com) | 
+| Twitter    | [http://twitter.com/thebetajs](http://twitter.com/thebetajs) | 
+
+
+
+## Compatability
+| Target | Versions |
+| :----- | -------: |
+| NodeJS | 0.10 - Latest |
+
+
+
+
+
+
 ## Contributors
 
 - Oliver Friedmann
 - Victor Lingenthal
 - Matt McNaughton
 
+
 ## License
 
-Apache 2.0
+Apache-2.0
 
 
 ## Credits
-This software uses modified portions of
-- Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud
 
+This software may include modified and unmodified portions of:
+- Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud

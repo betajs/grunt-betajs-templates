@@ -1,13 +1,3 @@
-/*
- * grunt-betajs-templates
- * https://github.com/betajs/grunt-betajs-templates
- *
- * Copyright (c) 2015 Oliver Friedmann
- * Licensed under the MIT license.
- */
-
-"use strict";
-
 module.exports = function(grunt) {
 	
 	var Helper = {

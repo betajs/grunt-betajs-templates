@@ -16,7 +16,7 @@
     },
     "name": "grunt-betajs-templates",
     "description": "Build BetaJS templates.",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "contributors": [
         "Oliver Friedmann",
         "Victor Lingenthal",
@@ -33,6 +33,7 @@
         "test": "grunt test"
     },
     "devDependencies": {
+    	"lodash": "",
         "grunt": "",
         "grunt-continue": "",
         "grunt-contrib-clean": "",

@@ -1,6 +1,7 @@
-# grunt-betajs-templates 0.1.9
+# grunt-betajs-templates 0.1.11
 [![Code Climate](https://codeclimate.com/github/betajs/grunt-betajs-templates/badges/gpa.svg)](https://codeclimate.com/github/betajs/grunt-betajs-templates)
-[![npm version](https://img.shields.io/npm/v/grunt-betajs-templates.svg?style=flat)](https://www.npmjs.com/package/grunt-betajs-templates)
+[![NPM](https://img.shields.io/npm/v/grunt-betajs-templates.svg?style=flat)](https://www.npmjs.com/package/grunt-betajs-templates)
+
 
 Build BetaJS templates.
 
@@ -91,9 +92,10 @@ grunt.initConfig({
 | :--------- | --: |
 | Homepage   | [https://github.com/betajs/grunt-betajs-templates](https://github.com/betajs/grunt-betajs-templates) |
 | Git        | [git://github.com/betajs/grunt-betajs-templates.git](git://github.com/betajs/grunt-betajs-templates.git) |
-| Repository | [http://github.com/betajs/grunt-betajs-templates](http://github.com/betajs/grunt-betajs-templates) |
+| Repository | [https://github.com/betajs/grunt-betajs-templates](https://github.com/betajs/grunt-betajs-templates) |
 | Blog       | [http://blog.betajs.com](http://blog.betajs.com) | 
 | Twitter    | [http://twitter.com/thebetajs](http://twitter.com/thebetajs) | 
+ 
 
 
 
@@ -107,12 +109,11 @@ grunt.initConfig({
 
 
 
-## Contributors
+## Main Contributors
 
 - Oliver Friedmann
 - Victor Lingenthal
 - Matt McNaughton
-
 
 ## License
 
@@ -123,3 +124,8 @@ Apache-2.0
 
 This software may include modified and unmodified portions of:
 - Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud
+
+
+
+
+

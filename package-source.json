@@ -1,39 +1,40 @@
 {
-  "name": "grunt-betajs-templates",
-  "description": "Build BetaJS templates.",
-  "version": "0.1.10",
-  "homepage": "https://github.com/betajs/grunt-betajs-templates",
-  "contributors": [
-    "Oliver Friedmann",
-    "Victor Lingenthal",
-    "Matt McNaughton"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/betajs/grunt-betajs-templates.git"
-  },
-  "engines": {
-    "node": ""
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "devDependencies": {
-	"lodash": "",
-    "grunt": "",
-    "grunt-continue": "",
-    "grunt-contrib-clean": "",
-    "grunt-contrib-jshint": "",
-    "grunt-template": "",
-    "grunt-jsdoc": "",
-	"betajs-compile": "betajs/betajs-compile",
-    "grunt-betajs-docs-compile":"",
-    "grunt-contrib-nodeunit": ""
-  },
-  "keywords": [
-    "gruntplugin"
-  ],
-  "meta": {
+	"name": "grunt-betajs-templates",
+	"description": "Build BetaJS templates.",
+	"version": "0.1.11",
+	"homepage": "https://github.com/betajs/grunt-betajs-templates",
+	"contributors": [
+		"Oliver Friedmann",
+		"Victor Lingenthal",
+		"Matt McNaughton"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/betajs/grunt-betajs-templates.git"
+	},
+	"engines": {
+		"node": ""
+	},
+	"scripts": {
+		"test": "grunt test"
+	},
+	"main": "tasks/betajs_templates.js",
+	"devDependencies": {
+		"lodash": "",
+		"grunt": "",
+		"grunt-continue": "",
+		"grunt-contrib-clean": "",
+		"grunt-contrib-jshint": "",
+		"grunt-template": "",
+		"grunt-jsdoc": "",
+		"betajs-compile": "~0.0.28",
+		"grunt-betajs-docs-compile": "~0.0.19",
+		"grunt-contrib-nodeunit": ""
+	},
+	"keywords": [
+		"gruntplugin"
+	],
+	"meta": {
 		"badges": {
 			"codeclimate": true,
 			"travis": false,
@@ -43,9 +44,9 @@
 			"Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud"
 		],
 		"compatability": {
-			"NodeJS": "0.10 - Latest" 
+			"NodeJS": "0.10 - Latest"
 		},
 		"installdoc": "docsrc/common/install.md",
 		"summarydoc": "docsrc/common/summary.md"
-  }
+	}
 }

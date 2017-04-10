@@ -125,3 +125,19 @@ module.exports = function(grunt) {
 		});
 	});
 };
+
+module.exports.concatProcess = function (grunt) {
+	return function (src, filepath) {
+        return grunt.template.process(src, {
+            data: {
+                filepath: filepath,
+                dirname: filepath.substring(0, filepath.lastIndexOf("/")),
+                filepathnoext: filepath.substring(0, filepath.lastIndexOf(".")),
+                template: function (filename) {
+                	var s = JSON.stringify(grunt.file.read(filename));
+                    return s.substring(1, s.length - 1);
+                }
+            }
+        });
+    };
+};

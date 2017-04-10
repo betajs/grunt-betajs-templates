@@ -1,7 +1,7 @@
 {
 	"name": "grunt-betajs-templates",
 	"description": "Build BetaJS templates.",
-	"version": "0.1.11",
+	"version": "0.1.12",
 	"homepage": "https://github.com/betajs/grunt-betajs-templates",
 	"contributors": [
 		"Oliver Friedmann",
@@ -38,7 +38,8 @@
 		"badges": {
 			"codeclimate": true,
 			"travis": false,
-			"npm": true
+			"npm": true,
+			"gitter": true
 		},
 		"credits": [
 			"Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud"

@@ -138,27 +138,43 @@ module.exports.concatProcess = function (grunt) {
                     return s.substring(1, s.length - 1);
                 },
 				template_function_cache: function (filename) {
-                    var result = [];
                     var cache = {};
-                    var s = grunt.file.read(filename);
-                    var regex = /{{(.+)}}/g;
-                    while (true) {
-                        var match = regex.exec(s);
-						if (!match)
-							break;
-                    	var code = match[1];
-                    	if (code.indexOf("-") === 0 || code.indexOf("=") === 0)
-                    		code = code.substring(1);
-                        var i = code.lastIndexOf("::");
-                        if (i >= 0)
-                            code = code.substring(i + 2);
-                        if (cache[code])
-                        	continue;
-                        cache[code] = true;
-                        result.push(
-                        	JSON.stringify(code) + ": " + "function (obj) { with (obj) { return " + code + "; } }"
-						);
+                    var oriText = grunt.file.read(filename);
+                    var text = oriText;
+                    while (text) {
+                        var i = text.indexOf("{{");
+                        if (i === 0) {
+                            i = text.indexOf("}}");
+                            while (i + 2 < text.length && text.charAt(i + 2) == "}")
+                                i++;
+                            if (i >= 0) {
+                                i += 2;
+                                var s = text.substring(2, i - 2);
+                                if (s.indexOf("-") === 0 || s.indexOf("=") === 0)
+                                    s = s.substring(1);
+								var j = s.lastIndexOf("::");
+								if (j >= 0)
+                                    s = s.substring(j + 2);
+								s = s.trim();
+                                cache[s] = s;
+                            } else
+                                i = text.length;
+                        } else if (i < 0)
+                            i = text.length;
+                        text = text.substring(i);
                     }
+                    text = oriText;
+                    var regex = /ba-(click|tap|on:[^=]+)\s*=\s*"\s*([^"]+)\s*"/g;
+                    var match;
+                    while (match = regex.exec(text))
+                        cache[match[2]] = match[2];
+                    text = oriText;
+                    regex = /ba-(click|tap|on:[^=]+)\s*=\s*'\s*([^']+)\s*'/g;
+                    while (match = regex.exec(text))
+                        cache[match[2]] = match[2];
+                    var result = [];
+                    for (var code in cache)
+                        result.push(JSON.stringify(code) + ": " + "function (obj) { with (obj) { return " + code + "; } }");
                     return '*/' + result.join(", ") + '/*';
 				}
             }

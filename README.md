@@ -1,4 +1,4 @@
-# grunt-betajs-templates 0.1.12
+# grunt-betajs-templates 0.1.13
 [![Code Climate](https://codeclimate.com/github/betajs/grunt-betajs-templates/badges/gpa.svg)](https://codeclimate.com/github/betajs/grunt-betajs-templates)
 [![NPM](https://img.shields.io/npm/v/grunt-betajs-templates.svg?style=flat)](https://www.npmjs.com/package/grunt-betajs-templates)
 [![Gitter Chat](https://badges.gitter.im/betajs/grunt-betajs-templates.svg)](https://gitter.im/betajs/grunt-betajs-templates)
@@ -102,7 +102,7 @@ grunt.initConfig({
 ## Compatability
 | Target | Versions |
 | :----- | -------: |
-| NodeJS | 0.10 - Latest |
+| NodeJS | 4.0 - Latest |
 
 
 

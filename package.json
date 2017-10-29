@@ -16,7 +16,7 @@
     },
     "name": "grunt-betajs-templates",
     "description": "Build BetaJS templates.",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "contributors": [
         "Oliver Friedmann",
         "Victor Lingenthal",
@@ -61,7 +61,7 @@
             "Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud"
         ],
         "compatability": {
-            "NodeJS": "0.10 - Latest"
+            "NodeJS": "4.0 - Latest"
         },
         "installdoc": "docsrc/common/install.md",
         "summarydoc": "docsrc/common/summary.md"

@@ -136,7 +136,31 @@ module.exports.concatProcess = function (grunt) {
                 template: function (filename) {
                 	var s = JSON.stringify(grunt.file.read(filename));
                     return s.substring(1, s.length - 1);
-                }
+                },
+				template_function_cache: function (filename) {
+                    var result = [];
+                    var cache = {};
+                    var s = grunt.file.read(filename);
+                    var regex = /{{(.+)}}/g;
+                    while (true) {
+                        var match = regex.exec(s);
+						if (!match)
+							break;
+                    	var code = match[1];
+                    	if (code.indexOf("-") === 0 || code.indexOf("=") === 0)
+                    		code = code.substring(1);
+                        var i = code.lastIndexOf("::");
+                        if (i >= 0)
+                            code = code.substring(i + 2);
+                        if (cache[code])
+                        	continue;
+                        cache[code] = true;
+                        result.push(
+                        	JSON.stringify(code) + ": " + "function (obj) { with (obj) { return " + code + "; } }"
+						);
+                    }
+                    return '*/' + result.join(", ") + '/*';
+				}
             }
         });
     };

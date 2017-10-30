@@ -139,7 +139,7 @@ module.exports.concatProcess = function (grunt) {
                 },
 				template_function_cache: function (filename) {
                     var cache = {};
-                    var oriText = grunt.file.read(filename);
+                    var oriText = grunt.file.read(filename).replace(/<!--.*-->/g, "");
                     var text = oriText;
                     while (text) {
                         var i = text.indexOf("{{");

@@ -16,7 +16,7 @@
     },
     "name": "grunt-betajs-templates",
     "description": "Build BetaJS templates.",
-    "version": "0.1.15",
+    "version": "0.1.16",
     "contributors": [
         "Oliver Friedmann",
         "Victor Lingenthal",

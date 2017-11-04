@@ -153,10 +153,19 @@ module.exports.concatProcess = function (grunt) {
                                 if (s.indexOf("-") === 0 || s.indexOf("=") === 0)
                                     s = s.substring(1);
 								var j = s.lastIndexOf("::");
-								if (j >= 0)
-                                    s = s.substring(j + 2);
-								s = s.trim();
-                                cache[s] = s;
+								if (j >= 0) {
+                                    var r = s.substring(j + 2).trim();
+                                    cache[r] = r;
+                                    s = s.substring(0, j);
+                                    j = s.indexOf("~");
+                                    if (j >= 0) {
+                                        r = s.substring(j + 1).trim();
+                                        cache[r] = r;
+									}
+                                } else {
+                                    s = s.trim();
+                                    cache[s] = s;
+								}
                             } else
                                 i = text.length;
                         } else if (i < 0)
@@ -164,12 +173,12 @@ module.exports.concatProcess = function (grunt) {
                         text = text.substring(i);
                     }
                     text = oriText;
-                    var regex = /ba-(click|tap|on:[^=]+)\s*=\s*"\s*([^"]+)\s*"/g;
+                    var regex = /ba-(event:[^=]+|click|tap|on:[^=]+)\s*=\s*"\s*([^"]+)\s*"/g;
                     var match;
                     while (match = regex.exec(text))
                         cache[match[2]] = match[2];
                     text = oriText;
-                    regex = /ba-(click|tap|on:[^=]+)\s*=\s*'\s*([^']+)\s*'/g;
+                    regex = /ba-(event:[^=]+|click|tap|on:[^=]+)\s*=\s*'\s*([^']+)\s*'/g;
                     while (match = regex.exec(text))
                         cache[match[2]] = match[2];
                     var result = [];

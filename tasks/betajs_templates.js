@@ -173,12 +173,12 @@ module.exports.concatProcess = function (grunt) {
                         text = text.substring(i);
                     }
                     text = oriText;
-                    var regex = /ba-(event:[^=]+|click|tap|on:[^=]+)\s*=\s*"\s*([^"]+)\s*"/g;
+                    var regex = /ba-(event:[^=]+|return|click|tap|on:[^=]+)\s*=\s*"\s*([^"]+)\s*"/g;
                     var match;
                     while (match = regex.exec(text))
                         cache[match[2]] = match[2];
                     text = oriText;
-                    regex = /ba-(event:[^=]+|click|tap|on:[^=]+)\s*=\s*'\s*([^']+)\s*'/g;
+                    regex = /ba-(event:[^=]+|return|click|tap|on:[^=]+)\s*=\s*'\s*([^']+)\s*'/g;
                     while (match = regex.exec(text))
                         cache[match[2]] = match[2];
                     var result = [];

@@ -139,8 +139,7 @@ module.exports.concatProcess = function (grunt) {
                 },
 				template_function_cache: function (filename) {
                     var cache = {};
-                    var oriText = grunt.file.read(filename).replace(/<!--.*-->/g, "");
-                    var text = oriText;
+                    var text = grunt.file.read(filename).replace(/<!--.*-->/g, "");
                     while (text) {
                         var i = text.indexOf("{{");
                         if (i === 0) {
@@ -172,15 +171,6 @@ module.exports.concatProcess = function (grunt) {
                             i = text.length;
                         text = text.substring(i);
                     }
-                    text = oriText;
-                    var regex = /ba-(event:[^=]+|return|click|tap|on:[^=]+)\s*=\s*"\s*([^"]+)\s*"/g;
-                    var match;
-                    while (match = regex.exec(text))
-                        cache[match[2]] = match[2];
-                    text = oriText;
-                    regex = /ba-(event:[^=]+|return|click|tap|on:[^=]+)\s*=\s*'\s*([^']+)\s*'/g;
-                    while (match = regex.exec(text))
-                        cache[match[2]] = match[2];
                     var result = [];
                     for (var code in cache)
                         result.push(JSON.stringify(code) + ": " + "function (obj) { with (obj) { return " + code + "; } }");

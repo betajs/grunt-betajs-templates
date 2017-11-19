@@ -1,7 +1,7 @@
 {
 	"name": "grunt-betajs-templates",
 	"description": "Build BetaJS templates.",
-	"version": "0.1.19",
+	"version": "0.1.20",
 	"homepage": "https://github.com/betajs/grunt-betajs-templates",
 	"contributors": [
 		"Oliver Friedmann",

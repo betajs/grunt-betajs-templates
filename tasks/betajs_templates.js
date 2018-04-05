@@ -127,6 +127,7 @@ module.exports = function(grunt) {
 };
 
 module.exports.concatProcess = function (grunt) {
+	var REGEX_COMMENT = /<!--[\s\S]*?-->/g;
 	return function (src, filepath) {
         return grunt.template.process(src, {
             data: {
@@ -134,12 +135,12 @@ module.exports.concatProcess = function (grunt) {
                 dirname: filepath.substring(0, filepath.lastIndexOf("/")),
                 filepathnoext: filepath.substring(0, filepath.lastIndexOf(".")),
                 template: function (filename) {
-                	var s = JSON.stringify(grunt.file.read(filename));
+                	var s = JSON.stringify(grunt.file.read(filename).replace(REGEX_COMMENT, ""));
                     return s.substring(1, s.length - 1);
                 },
 				template_function_cache: function (filename) {
                     var cache = {};
-                    var text = grunt.file.read(filename).replace(/<!--.*-->/g, "");
+                    var text = grunt.file.read(filename).replace(REGEX_COMMENT, "");
                     while (text) {
                         var i = text.indexOf("{{");
                         if (i === 0) {

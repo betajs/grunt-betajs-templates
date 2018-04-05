@@ -49,12 +49,13 @@ module.exports = function(grunt) {
     /* Markdown Files */
 	.readmeTask()
     .licenseTask()
+    .autoincreasepackageTask(null, "package-source.json")
     
     .docsTask();
 
 	grunt.initConfig(gruntHelper.config);	
 
-	grunt.registerTask('default', ['package', 'lint', 'readme', 'license', 'codeclimate', 'docs', 'test']);	
+	grunt.registerTask('default', ['autoincreasepackage', 'package', 'lint', 'readme', 'license', 'codeclimate', 'docs', 'test']);
 	
 	// Actually load this plugin's task(s).
 	grunt.loadTasks('tasks');

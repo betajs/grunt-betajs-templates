@@ -1,53 +1,54 @@
 {
-	"name": "grunt-betajs-templates",
-	"description": "Build BetaJS templates.",
-	"version": "0.1.20",
-	"homepage": "https://github.com/betajs/grunt-betajs-templates",
-	"contributors": [
-		"Oliver Friedmann",
-		"Victor Lingenthal",
-		"Matt McNaughton"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/betajs/grunt-betajs-templates.git"
-	},
-	"engines": {
-		"node": ""
-	},
-	"scripts": {
-		"test": "grunt test"
-	},
-	"main": "tasks/betajs_templates.js",
-	"devDependencies": {
-		"lodash": "",
-		"grunt": "",
-		"grunt-continue": "",
-		"grunt-contrib-clean": "",
-		"grunt-contrib-jshint": "",
-		"grunt-template": "",
-		"grunt-jsdoc": "",
-		"betajs-compile": "~0.0.28",
-		"grunt-betajs-docs-compile": "~0.0.19",
-		"grunt-contrib-nodeunit": ""
-	},
-	"keywords": [
-		"gruntplugin"
-	],
-	"meta": {
-		"badges": {
-			"codeclimate": true,
-			"travis": false,
-			"npm": true,
-			"gitter": true
-		},
-		"credits": [
-			"Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud"
-		],
-		"compatability": {
-			"NodeJS": "4.0 - Latest"
-		},
-		"installdoc": "docsrc/common/install.md",
-		"summarydoc": "docsrc/common/summary.md"
-	}
+    "name": "grunt-betajs-templates",
+    "description": "Build BetaJS templates.",
+    "version": "0.1.21",
+    "homepage": "https://github.com/betajs/grunt-betajs-templates",
+    "contributors": [
+        "Oliver Friedmann",
+        "Victor Lingenthal",
+        "Matt McNaughton"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/betajs/grunt-betajs-templates.git"
+    },
+    "engines": {
+        "node": ""
+    },
+    "scripts": {
+        "test": "grunt test",
+        "relink": "npm link betajs-compile"
+    },
+    "main": "tasks/betajs_templates.js",
+    "devDependencies": {
+        "lodash": "",
+        "grunt": "",
+        "grunt-continue": "",
+        "grunt-contrib-clean": "",
+        "grunt-contrib-jshint": "",
+        "grunt-template": "",
+        "grunt-jsdoc": "",
+        "betajs-compile": "~0.0.28",
+        "grunt-betajs-docs-compile": "~0.0.19",
+        "grunt-contrib-nodeunit": ""
+    },
+    "keywords": [
+        "gruntplugin"
+    ],
+    "meta": {
+        "badges": {
+            "codeclimate": true,
+            "travis": false,
+            "npm": true,
+            "gitter": true
+        },
+        "credits": [
+            "Underscore, MIT Software License, (c) 2009-2013 Jeremy Ashkenas, DocumentCloud"
+        ],
+        "compatability": {
+            "NodeJS": "4.0 - Latest"
+        },
+        "installdoc": "docsrc/common/install.md",
+        "summarydoc": "docsrc/common/summary.md"
+    }
 }

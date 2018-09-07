@@ -133,6 +133,7 @@ module.exports.concatProcess = function (grunt) {
             data: {
                 filepath: filepath,
                 dirname: filepath.substring(0, filepath.lastIndexOf("/")),
+                parentdirname: filepath.split("/").slice(0, -2).join("/"),
                 filepathnoext: filepath.substring(0, filepath.lastIndexOf(".")),
                 template: function (filename) {
                 	var s = JSON.stringify(grunt.file.read(filename).replace(REGEX_COMMENT, ""));

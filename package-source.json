@@ -1,7 +1,7 @@
 {
     "name": "grunt-betajs-templates",
     "description": "Build BetaJS templates.",
-    "version": "0.1.22",
+    "version": "0.1.23",
     "homepage": "https://github.com/betajs/grunt-betajs-templates",
     "contributors": [
         "Oliver Friedmann",
@@ -17,7 +17,8 @@
     },
     "scripts": {
         "test": "grunt test",
-        "relink": "npm link betajs-compile"
+        "relink": "npm link betajs-compile",
+        "reinstall": "rm -f package-lock.json && rm -rf node_modules && npm i && npm run relink"
     },
     "main": "tasks/betajs_templates.js",
     "devDependencies": {

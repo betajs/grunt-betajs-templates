@@ -3,3 +3,4 @@ npm-debug.log
 tmp
 .project
 .idea
+package-lock.json

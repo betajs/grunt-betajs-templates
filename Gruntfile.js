@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig(gruntHelper.config);	
 
-	grunt.registerTask('default', ['autoincreasepackage', 'package', 'lint', 'readme', 'license', 'codeclimate', 'docs', 'test']);
+	grunt.registerTask('default', ['autoincreasepackage', 'package', 'lint', 'readme', 'license', 'codeclimate', /*'docs',*/ 'test']);
 	
 	// Actually load this plugin's task(s).
 	grunt.loadTasks('tasks');

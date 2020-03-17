@@ -151,6 +151,8 @@ module.exports.concatProcess = function (grunt) {
                             if (i >= 0) {
                                 i += 2;
                                 var s = text.substring(2, i - 2);
+								if (s.indexOf("?") === 0)
+									s = s.substring(1);
                                 if (s.indexOf("*") === 0 || s.indexOf("-") === 0 || s.indexOf("=") === 0)
                                     s = s.substring(1);
 								var j = s.lastIndexOf("::");

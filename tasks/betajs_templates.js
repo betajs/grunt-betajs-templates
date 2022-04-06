@@ -1,3 +1,5 @@
+const Parser = require(__dirname + "/parser.js");
+
 module.exports = function(grunt) {
 	
 	var Helper = {
@@ -176,8 +178,15 @@ module.exports.concatProcess = function (grunt) {
                         text = text.substring(i);
                     }
                     var result = [];
-                    for (var code in cache)
-                        result.push(JSON.stringify(code) + ": " + "function (obj) { with (obj) { return " + code + "; } }");
+                    for (var code in cache) {
+						//result.push(JSON.stringify(code) + ": " + "function (obj) { with (obj) { return " + code + "; } }");
+						//console.log(code);
+						const prefix = "var obj = ";
+						let scopedCode = Parser.scopeSource(prefix + code + ";", "obj");
+						scopedCode = scopedCode.substring(prefix.length);
+						//console.log(scopedCode);
+						result.push(JSON.stringify(code) + ": " + "function (obj) { return " + scopedCode + " }");
+					}
                     return '*/' + result.join(", ") + '/*';
 				}
             }

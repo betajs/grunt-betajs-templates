@@ -16,7 +16,7 @@
     },
     "name": "grunt-betajs-templates",
     "description": "Build BetaJS templates.",
-    "version": "0.1.24",
+    "version": "0.1.25",
     "contributors": [
         "Oliver Friedmann",
         "Victor Lingenthal",
@@ -46,6 +46,9 @@
         "betajs-compile": "~0.0.28",
         "grunt-betajs-docs-compile": "~0.0.19",
         "grunt-contrib-nodeunit": ""
+    },
+    "dependencies": {
+        "acorn": "^8.7.0"
     },
     "keywords": [
         "gruntplugin"

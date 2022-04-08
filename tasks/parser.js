@@ -51,6 +51,7 @@ function extractVariables(ast) {
             subs = [ast.init, ast.test, ast.update, ast.body];
             break;
         case 'Literal':
+        case 'ThisExpression':
             break;
         default:
             console.log("Unexpected", ast);
